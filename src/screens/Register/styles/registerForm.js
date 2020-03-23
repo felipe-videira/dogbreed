@@ -8,9 +8,11 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
   },
   buttonTitle: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 24,
   },
   buttonIcon: {
     marginHorizontal: 10,
+    fontSize: 20,
   }
 });

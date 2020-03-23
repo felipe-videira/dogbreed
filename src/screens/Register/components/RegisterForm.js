@@ -6,10 +6,10 @@ import { Input, Button, ThemeContext } from 'react-native-elements';
 import { FontAwesome as Icon } from '@expo/vector-icons';
 import { string, object } from 'yup';
 
-import styles from '../styles/form';
+import styles from '../styles/registerForm';
 
 
-const Form = ({
+const RegisterForm = ({
   values,
   handleSubmit,
   setFieldValue,
@@ -26,9 +26,14 @@ const Form = ({
         <Input
           label={emailLabel}
           value={values.email}
+          keyboardType="email-address"
+          returnKeyType="next"
+          enablesReturnKeyAutomatically={true}
+          autoCapitalize='none'
           onChangeText={text => setFieldValue('email', text)}
           errorMessage={touched.email && errors.email && errors.email}
           disabled={isSubmitting}
+          onEndEditing={handleSubmit}
         />
         <Button
           type="clear"
@@ -40,10 +45,7 @@ const Form = ({
           iconRight
           icon={<Icon
             name="long-arrow-right"
-            size={20}
-            color={values.email
-                ? theme.colors.primary
-                : theme.colors.disabled}
+            color={theme.colors[values.email ? 'primary' : 'disabled']}
             style={styles.buttonIcon}
           />}
         />
@@ -59,4 +61,4 @@ export default withFormik({
       .required(props.requiredEmailText),
   }),
   handleSubmit: (values, { props }) => props.handleSubmit(values)
-})(Form);
+})(RegisterForm);

@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import { Button, Card } from 'react-native-elements';
 import { MaterialCommunityIcons as Icon} from '@expo/vector-icons';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
-import request from '../../services/request';
-import { onSignOut } from '../../services/auth';
+import { breedApi } from '../../api';
+import useAuth from '../../hooks/useAuth';
 import { BREEDS } from '../../constants';
 
 import styles from './styles';
-import { TouchableHighlight } from 'react-native-gesture-handler';
 
 
 export default function List({ navigation }) {
@@ -17,10 +17,10 @@ export default function List({ navigation }) {
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
 
-  const logout = async () => {
-    await onSignOut();
+  const { signOut } = useAuth()
 
-    navigation.navigate('SignedOut');
+  const logout = async () => {
+    return signOut();
   }
 
   const onPhotoPressed = uri => {
@@ -31,11 +31,11 @@ export default function List({ navigation }) {
     try {
       setLoading(true);
 
-      const { list } = await request(`/list?breed=${breed}`);
+      const items = await breedApi.list(breed);
 
-      setItems(list);
-    } catch (err) {
-      console.log(err)
+      setItems(items);
+    } catch (e) {
+      console.log(e)
     } finally {
       setLoading(false);
     }

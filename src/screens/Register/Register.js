@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import { View } from 'react-native';
-import Form from './components/Form';
+import RegisterForm from './components/RegisterForm';
+
+import useAuth from '../../hooks/useAuth';
+import { authApi } from '../../api';
 
 import styles from './styles';
-
-import request from '../../services/request';
-import { onSignIn } from '../../services/auth';
 
 
 export default function Register({ navigation }) {
@@ -14,19 +14,19 @@ export default function Register({ navigation }) {
   const [isSubmiting, setIsSubmiting] = useState(false);
   const [values, setValues] = useState({ email: '' });
 
-  const handleSubmit = async values => {
+  const { signIn } = useAuth();
+
+  const handleSubmit = async ({ email }) => {
     if (isSubmiting) return;
     try {
       setIsSubmiting(true);
-      setValues(values);
+      setValues({ email });
 
-      const { user } = await request('/register', 'POST', { email });
+      const token = await authApi.register(email);
 
-      await onSignIn(user.token);
-
-      navigation.navigate('SignedIn');
-    } catch (err) {
-      console.log(err)
+      await signIn(token);
+    } catch (e) {
+      console.log(e)
     } finally {
       setIsSubmiting(false);
     }
@@ -34,7 +34,7 @@ export default function Register({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Form
+      <RegisterForm
         values={values}
         handleSubmit={handleSubmit}
         invalidEmailText={'Digite um e-mail válido'}
