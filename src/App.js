@@ -1,19 +1,36 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { registerRootComponent } from 'expo';
 
-export default function App() {
+import { StatusBar } from 'react-native';
+import Routes from './routes';
+
+import { isSignedIn } from "./services/auth";
+
+
+function App() {
+
+  const [signed, setSigned] = useState(false);
+  const [signLoaded, setSignLoaded] = useState(false);
+
+  useEffect(() => {
+    isSignedIn()
+      .then(res => {
+        setSigned(res);
+        setSignLoaded(true);
+      })
+      .catch(err => console.log(err))
+  }, [])
+
+  if (!signLoaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <>
+      <StatusBar barStyle="light-content" />
+      <Routes signed={signed} />
+    </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default registerRootComponent(App);
