@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-import { View, ActivityIndicator } from 'react-native';
-import { Button, Card } from 'react-native-elements';
-import { MaterialCommunityIcons as Icon} from '@expo/vector-icons';
-import { TouchableHighlight } from 'react-native-gesture-handler';
+import {
+  View,
+  ActivityIndicator,
+  TouchableOpacity,
+  SafeAreaView,
+  ScrollView
+} from 'react-native';
+import { Image } from 'react-native-elements';
+import Header from '../../components/Header';
 
 import { breedApi } from '../../api';
 import useAuth from '../../hooks/useAuth';
@@ -43,30 +48,31 @@ export default function List({ navigation }) {
 
   useEffect(() => {
     getBreedList();
-  }, [])
-
-  if (loading) {
-    return <ActivityIndicator />
-  }
+  }, []);
 
   return (
     <View style={styles.container}>
-      <Button
-        type="clear"
-        onPress={logout}
-        icon={<Icon
-          name="logout"
-          size={20}
-        />}
-      />
-      {items.map((item, index) => (
-        <TouchableHighlight
-          key={index}
-          onPress={() => onPhotoPressed(item)}
-        >
-          <Card image={item} />
-        </TouchableHighlight>
-      ))}
+      <Header onLogout={logout} />
+      <SafeAreaView style={styles.listContainer}>
+        {loading ? (
+          <ActivityIndicator color="white" />
+        ) : (
+          <ScrollView contentContainerStyle={styles.list}>
+            {items.map((item, index) => (
+              <TouchableOpacity
+                key={index}
+                onPress={() => onPhotoPressed(item)}
+                style={styles.listItem}
+              >
+                <Image
+                  source={{ uri: item }}
+                  style={styles.listItemImage}
+                />
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+      )}
+      </SafeAreaView>
     </View>
   );
 }

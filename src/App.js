@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useMemo } from 'react';
 import { registerRootComponent } from 'expo';
 
-import { StatusBar, ActivityIndicator } from 'react-native';
+import { ActivityIndicator, StatusBar } from 'react-native';
 import Routes from './routes';
 
 import * as auth from "./services/auth";
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <AuthProvider value={authContext}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="ligth-content" />
       <Routes signed={!!state.token} />
     </AuthProvider>
   );
