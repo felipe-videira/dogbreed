@@ -5,7 +5,6 @@ export default StyleSheet.create({
     borderBottomWidth: 0
   },
   buttonIcon: {
-    color: "#fff",
     fontSize: 25
   }
 })

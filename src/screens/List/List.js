@@ -7,9 +7,8 @@ import {
   SafeAreaView,
   ScrollView
 } from 'react-native';
-import { Image } from 'react-native-elements';
+import { Image } from "react-native-expo-image-cache";
 import Header from '../../components/Header';
-
 import { breedApi } from '../../api';
 import useAuth from '../../hooks/useAuth';
 import { BREEDS } from '../../constants';
@@ -20,7 +19,7 @@ import styles from './styles';
 export default function List({ navigation }) {
 
   const [loading, setLoading] = useState(false);
-  const [items, setItems] = useState([]);
+  const [images, setImages] = useState([]);
 
   const { signOut } = useAuth()
 
@@ -36,9 +35,9 @@ export default function List({ navigation }) {
     try {
       setLoading(true);
 
-      const items = await breedApi.list(breed);
+      const images = await breedApi.list(breed);
 
-      setItems(items);
+      setImages(images);
     } catch (e) {
       console.log(e)
     } finally {
@@ -52,20 +51,20 @@ export default function List({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Header onLogout={logout} />
+      <Header onLogout={logout} iconColor="black"/>
       <SafeAreaView style={styles.listContainer}>
         {loading ? (
-          <ActivityIndicator color="white" />
+          <ActivityIndicator color="black" />
         ) : (
           <ScrollView contentContainerStyle={styles.list}>
-            {items.map((item, index) => (
+            {images.map((image, index) => (
               <TouchableOpacity
                 key={index}
-                onPress={() => onPhotoPressed(item)}
+                onPress={() => onPhotoPressed(image)}
                 style={styles.listItem}
               >
                 <Image
-                  source={{ uri: item }}
+                  uri={image}
                   style={styles.listItemImage}
                 />
               </TouchableOpacity>

@@ -58,4 +58,6 @@ function App() {
   );
 }
 
+GLOBAL.XMLHttpRequest = GLOBAL.originalXMLHttpRequest || GLOBAL.XMLHttpRequest;
+
 export default registerRootComponent(App);

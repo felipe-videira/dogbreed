@@ -10,7 +10,8 @@ import styles from "./styles";
 function Header({
   onGoBack,
   onLogout,
-  backgroundColor
+  backgroundColor,
+  iconColor
 }) {
   return (
     <RNEHeader
@@ -20,10 +21,17 @@ function Header({
         <Button
           type="clear"
           onPress={onGoBack || onLogout}
-          style={styles.buttonIcon}
           icon={onGoBack
-              ? <MaterialIcons style={styles.buttonIcon} name="arrow-back" />
-              : <MaterialCommunityIcons style={styles.buttonIcon} name="exit-run"/>}
+              ? <MaterialIcons
+                style={styles.buttonIcon}
+                color={iconColor}
+                name="arrow-back"
+              />
+              : <MaterialCommunityIcons
+                style={styles.buttonIcon}
+                color={iconColor}
+                name="exit-run"
+              />}
         />
       )}
     />
@@ -34,12 +42,14 @@ Header.propTypes = {
   onGoBack: func,
   onLogout: func,
   backgroundColor: string,
+  iconColor: string
 }
 
 Header.defaultProps = {
   onGoBack: null,
   onLogout: null,
   backgroundColor: 'transparent',
+  iconColor: 'white'
 }
 
 export default Header;

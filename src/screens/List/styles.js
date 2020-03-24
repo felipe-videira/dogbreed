@@ -6,7 +6,7 @@ const { width, height } = Dimensions.get("screen");
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3e3e3e',
+    backgroundColor: '#ececec',
   },
   listContainer: {
     flex: 1,
