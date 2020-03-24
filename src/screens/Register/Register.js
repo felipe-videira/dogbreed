@@ -9,7 +9,7 @@ import { authApi } from '../../api';
 import styles from './styles';
 
 
-export default function Register({ navigation }) {
+export default function Register() {
 
   const [isSubmiting, setIsSubmiting] = useState(false);
   const [values, setValues] = useState({ email: '' });

@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import Constants from 'expo-constants';
 
 const { width, height } = Dimensions.get("screen");
 
@@ -8,14 +7,12 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#ececec',
   },
-  listContainer: {
-    flex: 1,
-    backgroundColor: 'transparent',
-    marginTop: Constants.statusBarHeight,
-  },
   list: {
+    marginTop: 10,
+    paddingHorizontal: 20,
+  },
+  listContainer: {
     backgroundColor: 'transparent',
-    marginHorizontal: 5,
   },
   listItem: {
     marginVertical: 10
