@@ -10,7 +10,8 @@
     "build:ios": "expo build:ios",
     "build:web": "expo build:web",
     "eject": "expo eject",
-    "test": "jest"
+    "test": "jest",
+    "snapshot": "jest --updateSnapshot"
   },
   "dependencies": {
     "@dudigital/react-native-zoomable-view": "^1.0.15",
@@ -41,11 +42,12 @@
     "@babel/core": "^7.0.0",
     "babel-preset-expo": "~8.0.0",
     "jest-expo": "^36.0.1",
+    "jest-expo-enzyme": "^1.0.0",
     "react-test-renderer": "^16.13.1"
   },
   "private": true,
   "jest": {
-    "preset": "jest-expo",
+    "preset": "jest-expo-enzyme",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
     ]
