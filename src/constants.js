@@ -11,5 +11,4 @@ export const BREEDS_LIST = Object.keys(BREEDS).map(breed => ({
   value: BREEDS[breed]
 }));
 
-export const IMAGES_PER_PAGE = 10;
 
