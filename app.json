@@ -26,6 +26,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "An app with images of dogs from different breeds.",
+    "githubUrl": "https://github.com/felipe-videira/dogbreed"
   }
 }
