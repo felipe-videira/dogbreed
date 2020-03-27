@@ -27,35 +27,35 @@ function ImageList ({
         iconColor="white"
         backgroundColor="black"
       />
-        <RNPickerSelect
-            onValueChange={onValueChange}
-            items={BREEDS_LIST}
-            value={value}
-            disabled={loading}
-        />
-          {loading ? (
-            <ActivityIndicator color="black" />
-          ) : (
-            <FlatList
-              style={styles.list}
-              contentContainerStyle={styles.listContainer}
-              data={data}
-              renderItem={props => (
-                <ListItem
-                  {...props}
-                  onPress={onItemPress}
-                />
-              )}
-              keyExtractor={item => item}
+      <RNPickerSelect
+          onValueChange={onValueChange}
+          items={BREEDS_LIST}
+          value={value}
+          disabled={loading}
+      />
+      {loading ? (
+        <ActivityIndicator color="black" />
+      ) : (
+        <FlatList
+          style={styles.list}
+          contentContainerStyle={styles.listContainer}
+          data={data}
+          renderItem={props => (
+            <ListItem
+              {...props}
+              onPress={onItemPress}
             />
           )}
+          keyExtractor={item => item}
+        />
+      )}
     </View>
   );
 }
 
 
 ImageList.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.oneOf(BREEDS_LIST.map(breed => breed.value)),
   data: PropTypes.array,
   loading: PropTypes.bool,
   onValueChange: PropTypes.func.isRequired,

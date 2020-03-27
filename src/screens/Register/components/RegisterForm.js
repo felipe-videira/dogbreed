@@ -47,7 +47,7 @@ function RegisterForm({
               enablesReturnKeyAutomatically={true}
               autoCapitalize='none'
               onChangeText={handleChange('email')}
-              errorMessage={touched.email && errors.email && errors.email}
+              errorMessage={touched.email && errors.email}
               disabled={isSubmitting}
               onEndEditing={handleSubmit}
             />
@@ -61,9 +61,9 @@ function RegisterForm({
               iconRight
               icon={
                 <Icon
-                  name="long-arrow-right"
-                  color={theme.colors[values.email ? 'primary' : 'disabled']}
-                  style={styles.buttonIcon}
+                name="long-arrow-right"
+                color={theme.colors[values.email ? 'primary' : 'disabled']}
+                style={styles.buttonIcon}
                 />
               }
             />

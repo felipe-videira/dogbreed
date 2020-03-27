@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Screen should match the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ececec",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0,
+        "flexDirection": "row",
+        "height": 98,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 42,
+      }
+    }
+  >
+    <Image
+      style={
+        Object {
+          "bottom": 0,
+          "height": 98,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": undefined,
+        }
+      }
+      testID="headerContainer"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 3,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          nativeBackgroundAndroid={
+            Object {
+              "attribute": "selectableItemBackground",
+              "type": "ThemeAttrAndroid",
+            }
+          }
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "borderColor": "#2089dc",
+              "borderRadius": 3,
+              "borderWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "padding": 8,
+            }
+          }
+        >
+          <Text />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+      }
+    }
+  >
+    <AndroidDialogPicker
+      enabled={true}
+      items={
+        Array [
+          Object {
+            "color": -6381404,
+            "label": "Select an item...",
+          },
+          Object {
+            "color": null,
+            "label": "chihuahua",
+          },
+          Object {
+            "color": null,
+            "label": "husky",
+          },
+          Object {
+            "color": null,
+            "label": "pug",
+          },
+          Object {
+            "color": null,
+            "label": "labrador",
+          },
+        ]
+      }
+      onSelect={[Function]}
+      selected={1}
+      style={
+        Object {
+          "height": 50,
+        }
+      }
+      testID="android_picker"
+    />
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "marginTop": 10,
+        "paddingHorizontal": 20,
+      }
+    }
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;

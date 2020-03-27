@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Screen should match the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ececec",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "black",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <Image
+      style={
+        Object {
+          "bottom": 0,
+          "height": 64,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": undefined,
+        }
+      }
+      testID="headerContainer"
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 3,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#2089dc",
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "padding": 8,
+              }
+            }
+          >
+            <Text />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID="ios_touchable_wrapper"
+    >
+      <View
+        pointerEvents="box-only"
+      >
+        <TextInput
+          allowFontScaling={true}
+          editable={false}
+          rejectResponderTermination={true}
+          style={
+            Array [
+              undefined,
+              Object {},
+            ]
+          }
+          testID="text_input"
+          underlineColorAndroid="transparent"
+          value="chihuahua"
+        />
+      </View>
+    </View>
+    <Modal
+      hardwareAccelerated={false}
+      onOrientationChange={[Function]}
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      testID="ios_modal"
+      transparent={true}
+      visible={false}
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flex": 1,
+            "opacity": 1,
+          }
+        }
+        testID="ios_modal_top"
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#f8f8f8",
+            "borderTopColor": "#dedede",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "height": 45,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 10,
+            "zIndex": 2,
+          }
+        }
+        testID="input_accessory_view"
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderColor": "#a1a1a1",
+                  "borderRightWidth": 1.5,
+                  "borderTopWidth": 1.5,
+                  "height": 15,
+                  "marginLeft": 11,
+                  "transform": Array [
+                    Object {
+                      "translateY": 4,
+                    },
+                    Object {
+                      "rotate": "-45deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderColor": "#a1a1a1",
+                  "borderRightWidth": 1.5,
+                  "borderTopWidth": 1.5,
+                  "height": 15,
+                  "marginLeft": 22,
+                  "transform": Array [
+                    Object {
+                      "translateY": -5,
+                    },
+                    Object {
+                      "rotate": "135deg",
+                    },
+                  ],
+                  "width": 15,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 4,
+              "left": 4,
+              "right": 4,
+              "top": 4,
+            }
+          }
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="done_button"
+        >
+          <View
+            testID="needed_for_touchable"
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Object {
+                  "color": "#007aff",
+                  "fontSize": 17,
+                  "fontWeight": "600",
+                  "paddingRight": 11,
+                  "paddingTop": 1,
+                }
+              }
+              testID="done_text"
+            >
+              Done
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#d0d4da",
+            "height": 215,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View>
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "Select an item...",
+                  "textColor": 4288585892,
+                  "value": null,
+                },
+                Object {
+                  "label": "chihuahua",
+                  "textColor": undefined,
+                  "value": "chihuahua",
+                },
+                Object {
+                  "label": "husky",
+                  "textColor": undefined,
+                  "value": "husky",
+                },
+                Object {
+                  "label": "pug",
+                  "textColor": undefined,
+                  "value": "pug",
+                },
+                Object {
+                  "label": "labrador",
+                  "textColor": undefined,
+                  "value": "labrador",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={1}
+            style={
+              Object {
+                "height": 216,
+              }
+            }
+            testID="ios_picker"
+          />
+        </View>
+      </View>
+    </Modal>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+    data={Array []}
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "marginTop": 10,
+        "paddingHorizontal": 20,
+      }
+    }
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;
