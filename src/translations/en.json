@@ -2,5 +2,6 @@
   "invalidEmailText": "Please, type a valid email",
   "requiredEmailText": "Please, type your e-mail",
   "emailLabel": "Type your e-mail",
-  "submitTitle": "Continue"
+  "submitTitle": "Continue",
+  "emptyListText": "No images found"
 }

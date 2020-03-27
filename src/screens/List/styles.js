@@ -7,6 +7,10 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#ececec',
   },
+  emptyListText: {
+    fontSize: 20,
+    alignSelf: 'center'
+  },
   list: {
     marginTop: 10,
     paddingHorizontal: 20,

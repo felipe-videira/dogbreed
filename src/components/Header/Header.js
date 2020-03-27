@@ -5,6 +5,10 @@ import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { string, func } from 'prop-types';
 
 import styles from "./styles";
+import {
+  LOGOUT_ICON_NAME,
+  GOBACK_ICON_NAME
+} from '../../constants';
 
 
 function Header({
@@ -21,17 +25,19 @@ function Header({
         <Button
           type="clear"
           onPress={onGoBack || onLogout}
-          icon={onGoBack
-              ? <MaterialIcons
-                style={styles.buttonIcon}
-                color={iconColor}
-                name="arrow-back"
-              />
-              : <MaterialCommunityIcons
-                style={styles.buttonIcon}
-                color={iconColor}
-                name="exit-run"
-              />}
+          icon={onGoBack ? (
+            <MaterialIcons
+              style={styles.buttonIcon}
+              color={iconColor}
+              name={GOBACK_ICON_NAME}
+            />
+          ) : (
+            <MaterialCommunityIcons
+              style={styles.buttonIcon}
+              color={iconColor}
+              name={LOGOUT_ICON_NAME}
+            />
+          )}
         />
       )}
     />

@@ -74,7 +74,7 @@ function RegisterForm({
 }
 
 RegisterForm.propTypes = {
-  values: PropTypes.shape({
+  values: PropTypes.exact({
     email: PropTypes.string
   }),
   onSubmit: PropTypes.func.isRequired,

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Image } from "react-native-expo-image-cache";
-import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView';
-import Header from '../../../components/Header';
 import { View } from 'react-native';
+import Image from '../../../components/Image';
+import Header from '../../../components/Header';
+import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView';
 
 import PropTypes from 'prop-types';
 
@@ -38,9 +38,9 @@ function PhotoDisplay({
 PhotoDisplay.propTypes = {
   uri: PropTypes.string.isRequired,
   onGoBack: PropTypes.func.isRequired,
-  imageSize: PropTypes.shape({
+  imageSize: PropTypes.exact({
     width: PropTypes.number,
-    heigth: PropTypes.number
+    height: PropTypes.number
   }).isRequired,
 }
 

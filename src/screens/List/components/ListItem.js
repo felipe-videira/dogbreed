@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { Image } from "react-native-expo-image-cache";
+import Image from '../../../components/Image';
 import { TouchableOpacity } from 'react-native';
 import { pure } from 'recompose';
 
@@ -16,7 +16,11 @@ function ListItem ({ item, onPress }) {
       onPress={() => onPress(item)}
       style={styles.listItem}
     >
-      <Image uri={item} style={styles.listItemImage} />
+      <Image
+        uri={item}
+        style={styles.listItemImage}
+        showAltImageOnError={false}
+      />
     </TouchableOpacity>
   );
 }

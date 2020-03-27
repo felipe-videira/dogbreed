@@ -1,50 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List Screen Item should match the snapshot 1`] = `
-<div
-  className="css-view-1dbjc4n"
-  data-focusable={true}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "MozTransitionProperty": "opacity",
-      "MozUserSelect": "none",
-      "WebkitTransitionDuration": "0.15s",
-      "WebkitTransitionProperty": "opacity",
-      "WebkitUserSelect": "none",
-      "cursor": "pointer",
-      "marginBottom": "10px",
-      "marginTop": "10px",
-      "msTouchAction": "manipulation",
-      "msUserSelect": "none",
-      "touchAction": "manipulation",
-      "transitionDuration": "0.15s",
-      "transitionProperty": "opacity",
-      "userSelect": "none",
-    }
-  }
-  tabIndex="0"
->
-  <div
-    className="css-view-1dbjc4n"
-    style={
-      Object {
-        "height": "0px",
-        "width": "0px",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`List Screen List should match the snapshot 1`] = `
+exports[`Photo Screen should match the snapshot 1`] = `
 <div
   className="css-view-1dbjc4n"
   style={
@@ -53,7 +9,7 @@ exports[`List Screen List should match the snapshot 1`] = `
       "WebkitFlexBasis": "0%",
       "WebkitFlexGrow": 1,
       "WebkitFlexShrink": 1,
-      "backgroundColor": "rgba(236,236,236,1.00)",
+      "backgroundColor": "rgba(14,14,14,1.00)",
       "flexBasis": "0%",
       "flexGrow": 1,
       "flexShrink": 1,
@@ -75,7 +31,7 @@ exports[`List Screen List should match the snapshot 1`] = `
         "WebkitFlexDirection": "row",
         "WebkitJustifyContent": "space-between",
         "alignItems": "center",
-        "backgroundColor": "rgba(0,0,0,1.00)",
+        "backgroundColor": "rgba(0,0,0,0.00)",
         "borderBottomColor": "rgba(242,242,242,1.00)",
         "borderBottomWidth": "0px",
         "flexDirection": "row",
@@ -285,96 +241,25 @@ exports[`List Screen List should match the snapshot 1`] = `
     className="css-view-1dbjc4n"
     style={
       Object {
-        "WebkitAlignSelf": "stretch",
-        "alignSelf": "stretch",
-        "msFlexItemAlign": "stretch",
-      }
-    }
-  >
-    <select
-      data-focusable={true}
-      data-testid="android_picker"
-      onChange={[Function]}
-      style={
-        Object {
-          "fontFamily": "system-ui,-apple-system,BlinkMacSystemFont,\\"Segoe UI\\",Roboto,Ubuntu,\\"Helvetica Neue\\",sans-serif",
-          "fontSize": "inherit",
-          "marginBottom": "0px",
-          "marginLeft": "0px",
-          "marginRight": "0px",
-          "marginTop": "0px",
-        }
-      }
-      value="chihuahua"
-    >
-      <option
-        style={
-          Object {
-            "color": "rgba(158,160,164,1.00)",
-          }
-        }
-        value={null}
-      >
-        Select an item...
-      </option>
-      <option
-        value="chihuahua"
-      >
-        chihuahua
-      </option>
-      <option
-        value="husky"
-      >
-        husky
-      </option>
-      <option
-        value="pug"
-      >
-        pug
-      </option>
-      <option
-        value="labrador"
-      >
-        labrador
-      </option>
-    </select>
-  </div>
-  <div
-    className="css-view-1dbjc4n"
-    onResponderGrant={[Function]}
-    onResponderReject={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onScroll={[Function]}
-    onScrollShouldSetResponder={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onStartShouldSetResponderCapture={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    onWheel={[Function]}
-    style={
-      Object {
-        "WebkitBoxDirection": "normal",
+        "WebkitAlignItems": "center",
+        "WebkitBoxAlign": "center",
         "WebkitBoxFlex": 1,
-        "WebkitBoxOrient": "vertical",
-        "WebkitFlexDirection": "column",
+        "WebkitBoxPack": "center",
+        "WebkitFlexBasis": "0%",
         "WebkitFlexGrow": 1,
         "WebkitFlexShrink": 1,
-        "WebkitOverflowScrolling": "touch",
-        "WebkitTransform": "translateZ(0px)",
-        "flexDirection": "column",
+        "WebkitJustifyContent": "center",
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.00)",
+        "flexBasis": "0%",
         "flexGrow": 1,
         "flexShrink": 1,
-        "marginTop": "10px",
-        "msFlexDirection": "column",
+        "justifyContent": "center",
+        "msFlexAlign": "center",
         "msFlexNegative": 1,
+        "msFlexPack": "center",
         "msFlexPositive": 1,
-        "overflowX": "hidden",
-        "overflowY": "auto",
-        "paddingLeft": "20px",
-        "paddingRight": "20px",
-        "transform": "translateZ(0px)",
+        "msFlexPreferredSize": "0%",
       }
     }
   >
@@ -382,29 +267,11 @@ exports[`List Screen List should match the snapshot 1`] = `
       className="css-view-1dbjc4n"
       style={
         Object {
-          "backgroundColor": "rgba(0,0,0,0.00)",
+          "height": "0px",
+          "width": "0px",
         }
       }
-    >
-      <div
-        className="css-view-1dbjc4n"
-      >
-        <div
-          className="css-text-901oao"
-          dir="auto"
-          style={
-            Object {
-              "WebkitAlignSelf": "center",
-              "alignSelf": "center",
-              "fontSize": "20px",
-              "msFlexItemAlign": "center",
-            }
-          }
-        >
-          mock text
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </div>
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ListItem from './ListItem';
-import { View, ActivityIndicator, FlatList } from 'react-native';
+import { View, ActivityIndicator, FlatList, Text } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import Header from '../../../components/Header';
 
@@ -16,6 +16,7 @@ function ImageList ({
   value,
   data,
   loading,
+  emptyListText,
   onValueChange,
   onItemPress,
   onLogout,
@@ -40,6 +41,11 @@ function ImageList ({
           style={styles.list}
           contentContainerStyle={styles.listContainer}
           data={data}
+          ListEmptyComponent={() => (
+            <Text style={styles.emptyListText}>
+              {emptyListText}
+            </Text>
+          )}
           renderItem={props => (
             <ListItem
               {...props}
@@ -58,6 +64,7 @@ ImageList.propTypes = {
   value: PropTypes.oneOf(BREEDS_LIST.map(breed => breed.value)),
   data: PropTypes.array,
   loading: PropTypes.bool,
+  emptyListText: PropTypes.string.isRequired,
   onValueChange: PropTypes.func.isRequired,
   onItemPress: PropTypes.func.isRequired,
   onLogout: PropTypes.func.isRequired,

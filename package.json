@@ -10,8 +10,10 @@
     "build:ios": "expo build:ios",
     "build:web": "expo build:web",
     "eject": "expo eject",
-    "test": "jest",
-    "snapshot": "jest --updateSnapshot"
+    "test": "jest --watch --coverage=false --changedSince=origin/master",
+    "testDebug": "jest -o --watch --coverage=false",
+    "testFinal": "jest",
+    "updateSnapshots": "jest -u --coverage=false"
   },
   "dependencies": {
     "@dudigital/react-native-zoomable-view": "^1.0.15",
@@ -20,6 +22,7 @@
     "@react-navigation/stack": "^5.2.3",
     "axios": "^0.19.2",
     "expo": "~36.0.0",
+    "expo-asset": "~8.0.0",
     "expo-blur": "~8.0.0",
     "expo-localization": "~8.0.0",
     "formik": "^2.1.4",
@@ -44,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "babel-preset-expo": "~8.0.0",
+    "jest": "^25.2.3",
     "jest-expo": "^36.0.1",
     "jest-expo-enzyme": "^1.0.0",
     "react-test-renderer": "^16.13.1"

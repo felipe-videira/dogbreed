@@ -4,6 +4,8 @@ import ImageList from './components/ImageList';
 import useAuth from '../../hooks/useAuth';
 import { breedApi } from '../../api';
 
+import i18n from 'i18n-js';
+
 import { BREEDS } from '../../constants';
 
 
@@ -52,6 +54,7 @@ export default function List({ navigation }) {
       value={selectedBreed}
       loading={loading}
       data={images}
+      emptyListText={i18n.t('emptyListText')}
     />
   );
 }
