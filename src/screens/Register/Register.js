@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 
-import { View } from 'react-native';
 import RegisterForm from './components/RegisterForm';
 
 import useAuth from '../../hooks/useAuth';
 import { authApi } from '../../api';
-
-import styles from './styles';
+import i18n from 'i18n-js';
 
 
 export default function Register() {
 
   const [isSubmiting, setIsSubmiting] = useState(false);
-  const [values, setValues] = useState({ email: '' });
 
   const { signIn } = useAuth();
 
@@ -20,7 +17,6 @@ export default function Register() {
     if (isSubmiting) return;
     try {
       setIsSubmiting(true);
-      setValues({ email });
 
       const token = await authApi.register(email);
 
@@ -33,15 +29,12 @@ export default function Register() {
   }
 
   return (
-    <View style={styles.container}>
-      <RegisterForm
-        values={values}
-        handleSubmit={handleSubmit}
-        invalidEmailText={'Digite um e-mail válido'}
-        requiredEmailText={'Preencha o campo de e-mail'}
-        emailLabel={'Digite seu e-mail'}
-        submitTitle={'Continuar'}
-      />
-    </View>
+    <RegisterForm
+      onSubmit={handleSubmit}
+      invalidEmailText={i18n.t('invalidEmailText')}
+      requiredEmailText={i18n.t('requiredEmailText')}
+      emailLabel={i18n.t('emailLabel')}
+      submitTitle={i18n.t('submitTitle')}
+    />
   );
 }

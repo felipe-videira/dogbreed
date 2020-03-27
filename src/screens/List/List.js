@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import {
-  View,
-  ActivityIndicator,
-  TouchableOpacity,
-  FlatList
-} from 'react-native';
-import { Image } from "react-native-expo-image-cache";
-import RNPickerSelect from 'react-native-picker-select';
-import Header from '../../components/Header';
-
+import ImageList from './components/ImageList';
 import useAuth from '../../hooks/useAuth';
 import { breedApi } from '../../api';
 
-import styles from './styles';
-
-import { BREEDS, BREEDS_LIST } from '../../constants';
+import { BREEDS } from '../../constants';
 
 
 export default function List({ navigation }) {
@@ -51,44 +40,18 @@ export default function List({ navigation }) {
     }
   }
 
-  const renderItem = ({ item }) => (
-    <TouchableOpacity
-      onPress={() => onPhotoPressed(item)}
-      style={styles.listItem}
-    >
-      <Image uri={item} style={styles.listItemImage} />
-    </TouchableOpacity>
-  );
-
   useEffect(() => {
     getBreedList(selectedBreed);
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Header
-        onLogout={logout}
-        iconColor="white"
-        backgroundColor="black"
-      />
-        <RNPickerSelect
-            onValueChange={value => getBreedList(value)}
-            items={BREEDS_LIST}
-            value={selectedBreed}
-            useNativeAndroidPickerStyle={false}
-            disabled={loading}
-        />
-          {loading ? (
-            <ActivityIndicator color="black" />
-          ) : (
-            <FlatList
-              style={styles.list}
-              contentContainerStyle={styles.listContainer}
-              data={images}
-              renderItem={renderItem}
-              keyExtractor={item => item}
-            />
-          )}
-    </View>
+    <ImageList
+      onLogout={logout}
+      onValueChange={getBreedList}
+      onItemPress={onPhotoPressed}
+      value={selectedBreed}
+      loading={loading}
+      data={images}
+    />
   );
 }

@@ -1,0 +1,72 @@
+import React from 'react';
+
+import ListItem from './ListItem';
+import { View, ActivityIndicator, FlatList } from 'react-native';
+import RNPickerSelect from 'react-native-picker-select';
+import Header from '../../../components/Header';
+
+import { BREEDS_LIST, BREEDS } from '../../../constants';
+
+import PropTypes from 'prop-types';
+
+import styles from '../styles';
+
+
+function ImageList ({
+  value,
+  data,
+  loading,
+  onValueChange,
+  onItemPress,
+  onLogout,
+}) {
+  return (
+    <View style={styles.container}>
+      <Header
+        onLogout={onLogout}
+        iconColor="white"
+        backgroundColor="black"
+      />
+        <RNPickerSelect
+            onValueChange={onValueChange}
+            items={BREEDS_LIST}
+            value={value}
+            disabled={loading}
+        />
+          {loading ? (
+            <ActivityIndicator color="black" />
+          ) : (
+            <FlatList
+              style={styles.list}
+              contentContainerStyle={styles.listContainer}
+              data={data}
+              renderItem={props => (
+                <ListItem
+                  {...props}
+                  onPress={onItemPress}
+                />
+              )}
+              keyExtractor={item => item}
+            />
+          )}
+    </View>
+  );
+}
+
+
+ImageList.propTypes = {
+  value: PropTypes.string,
+  data: PropTypes.array,
+  loading: PropTypes.bool,
+  onValueChange: PropTypes.func.isRequired,
+  onItemPress: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+}
+
+ImageList.defaultProps = {
+  value: BREEDS.CHIHUAHUA,
+  data: [],
+  loading: false,
+}
+
+export default ImageList;

@@ -4,6 +4,7 @@ import { registerRootComponent } from 'expo';
 import { ActivityIndicator, StatusBar } from 'react-native';
 import Routes from './routes';
 
+import './i18n';
 import * as auth from "./services/auth";
 import { authReducer, AUTH_TYPES } from "./reducers/authReducer";
 import { AuthProvider } from "./providers/authProvider";
@@ -57,7 +58,5 @@ function App() {
     </AuthProvider>
   );
 }
-
-GLOBAL.XMLHttpRequest = GLOBAL.originalXMLHttpRequest || GLOBAL.XMLHttpRequest;
 
 export default registerRootComponent(App);
