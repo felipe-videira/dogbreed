@@ -20,6 +20,8 @@ Make sure you have Expo CLI installed: `npm install -g expo-cli`
 
 Install: `npm install` 
 
+Create a .env file based on .env.example
+
 Run Project Locally: `expo start` or `npm start`
 
 ## Stats
